@@ -1,0 +1,219 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #333;
+}
+
+.hero {
+    background-color: #e0f7fa;
+    color: #004d40;
+    text-align: center;
+    padding: 50px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 3em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    width: 300px; /* Set desired width */
+    height: 300px; /* Set fixed height for the slideshow container */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.active {
+    display: block;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding-bottom: 50px; /* Adjust the value as needed */
+    text-align: left;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.internship-details {
+    margin-top: 20px;
+}
+
+.internship-details h3 {
+    color: #333;
+    margin-top: 20px;
+}
+
+.internship-details p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.dialogue {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-left: 4px solid #4CAF50;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.dialogue strong {
+    color: #333;
+}
+
+.dialogue p {
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .slideshow-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    form {
+        width: 90%;
+    }
+}
